@@ -1,0 +1,172 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --primary-color: #2b608f;
+  --primary-color-hover: #1b4a75;
+  --container-color:#6998c2;
+  --google-fonts: 'Open Sans', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--google-fonts);
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 650px;
+  width: 450px;
+  background-color: var(--container-color);
+  box-shadow: 0 5px 25px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+/* Headers */
+h1 {
+  font-size: 28px;
+  font-family: var(--google-fonts);
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* Form */
+form {
+  width: 90%;
+}
+
+.form-group {
+  height: 60px; 
+  margin-top: 5px;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: var(--google-fonts);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+input:valid {
+  border: 2px solid #007200;
+}
+
+input:invalid {
+  border: 2px solid #6e0101;
+}
+ 
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--primary-color);
+  border: 2px solid white;
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
+  font-family: var(--google-fonts);
+  letter-spacing: 2px;
+  color: white;
+}
+
+button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+button:focus {
+  outline:none;
+}
+
+.result-message-container {
+  width: 90%;
+  height: 60px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Media Queries */
+/* Pixel 2/XL, */
+@media screen and (max-width: 450px) {
+  .container {
+    height: 700px;
+    width: 400px; 
+  }
+}
+
+/* iPhone X */
+@media screen and (max-width: 376px) {
+  .container {
+    height: 635px;
+    width: 350px; 
+  }
+}
+
+/* Iphone 5/SE, Galaxy Fold*/
+@media screen and (max-width: 321px) {
+  .container {
+    height: 550px;
+    width: 275px; 
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  input {
+    height: 30px;
+    font-size: 14px;
+  }
+   
+  button {
+    margin-top: 10px;
+    font-size: 15px;
+    height: 30px;
+  }
+
+  .result-message-container {
+    height: 35px;
+    margin-top: 10px;
+  }
+}
